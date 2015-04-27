@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ClickerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKw-tr-5dE">
+                                <rect key="frame" x="226" y="28" width="149" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="CtZ-9V-sRv"/>
+                                    <constraint firstAttribute="height" constant="67" id="XUC-DI-tON"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUn-bj-TX3">
+                                <rect key="frame" x="383" y="40" width="46" height="42.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="UFB-ST-r94"/>
+                                    <constraint firstAttribute="height" constant="42.5" id="b6q-VE-eij"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.97771733067800171" green="1" blue="0.91496276530195952" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TvY-Rh-dU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qx9-dk-swl">
+                                <rect key="frame" x="16" y="206" width="568" height="374"/>
+                                <color key="backgroundColor" red="0.33137990398749828" green="0.59294113005050497" blue="0.22389220429553877" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="225"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.97771733067800171" green="1" blue="0.91496276530195952" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sJI-cM-sZh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-0D-Zgf">
+                                <rect key="frame" x="226" y="118" width="149" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="3Ay-R3-ieX"/>
+                                    <constraint firstAttribute="height" constant="80" id="Pg9-bs-BDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.96811671792102039" green="1" blue="0.96390671468143374" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2FM-1y-WYk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Qx9-dk-swl" secondAttribute="bottom" constant="20" id="GTI-HS-HgE"/>
+                            <constraint firstItem="NUn-bj-TX3" firstAttribute="leading" secondItem="WKw-tr-5dE" secondAttribute="trailing" constant="8" id="Tbf-mz-D9y"/>
+                            <constraint firstItem="Qx9-dk-swl" firstAttribute="top" secondItem="0PK-0D-Zgf" secondAttribute="bottom" constant="8" id="UaE-gJ-mDZ"/>
+                            <constraint firstItem="Qx9-dk-swl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="bGs-gg-MiZ"/>
+                            <constraint firstItem="0PK-0D-Zgf" firstAttribute="top" secondItem="WKw-tr-5dE" secondAttribute="bottom" constant="23" id="faf-dC-sRx"/>
+                            <constraint firstItem="NUn-bj-TX3" firstAttribute="centerY" secondItem="WKw-tr-5dE" secondAttribute="centerY" constant="-0.25" id="gdG-X5-XiU"/>
+                            <constraint firstAttribute="centerX" secondItem="0PK-0D-Zgf" secondAttribute="centerX" constant="-0.5" id="iqa-gD-SUy"/>
+                            <constraint firstItem="Qx9-dk-swl" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="lP1-3V-XoF"/>
+                            <constraint firstItem="WKw-tr-5dE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="m6N-Xd-2L7"/>
+                            <constraint firstAttribute="centerX" secondItem="WKw-tr-5dE" secondAttribute="centerX" constant="-0.5" id="o8K-F1-bKX"/>
+                            <constraint firstAttribute="centerX" secondItem="Qx9-dk-swl" secondAttribute="centerX" id="q3w-9c-pmp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="WKw-tr-5dE" id="ZaX-13-HDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

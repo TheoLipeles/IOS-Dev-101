@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FWx-9l-rlF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Table View Controller-->
+        <scene sceneID="9dF-Ki-gLH">
+            <objects>
+                <tableViewController id="n9Q-Ji-Rof" customClass="MovieTableViewController" customModule="MovieTheaterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kNk-DK-Bgj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yyN-SP-JdG">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yyN-SP-JdG" id="16Z-pd-LpV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="an2-98-hfX" kind="show" id="FWB-bQ-pYb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="n9Q-Ji-Rof" id="UUg-2N-n5q"/>
+                            <outlet property="delegate" destination="n9Q-Ji-Rof" id="1Op-cJ-czi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hFn-DX-3kN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WV0-Y4-Ean">
+                            <connections>
+                                <segue destination="Y6k-In-jSf" kind="presentation" identifier="addMovie" id="9Nb-cB-4FQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5e9-qQ-xUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="426"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="AP3-ux-ey8">
+            <objects>
+                <viewController id="an2-98-hfX" customClass="MovieDetailViewController" customModule="MovieTheaterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fMk-Lq-fLw"/>
+                        <viewControllerLayoutGuide type="bottom" id="XzS-tX-Pr1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0XP-Fs-6qX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ER-NI-oqa">
+                                <rect key="frame" x="16" y="72" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-bM-gXS">
+                                <rect key="frame" x="16" y="110" width="48" height="30"/>
+                                <state key="normal" title="update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieTitleTextField" destination="u9I-vJ-AvO" id="lH1-HN-xZ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbe-CD-rWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="146"/>
+        </scene>
+        <!--New Movie View Controller-->
+        <scene sceneID="bah-v0-2nA">
+            <objects>
+                <viewController id="dea-jo-bnh" customClass="NewMovieViewController" customModule="MovieTheaterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pUq-y3-HAv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yg9-7a-DZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FMo-7P-P6h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9I-vJ-AvO">
+                                <rect key="frame" x="16" y="72" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkT-MC-tyq">
+                                <rect key="frame" x="16" y="110" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveMovie:" destination="dea-jo-bnh" eventType="touchUpInside" id="ab9-C9-Sm7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nW4-Bb-KhA"/>
+                    <connections>
+                        <outlet property="movieTitleTextField" destination="u9I-vJ-AvO" id="UqQ-Dc-W06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUd-gX-6Mk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453" y="834"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l1Q-di-dGX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FWx-9l-rlF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="enK-n4-JMh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n9Q-Ji-Rof" kind="relationship" relationship="rootViewController" id="tiA-Ph-p0X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zq-CG-CUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="426"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iav-Yx-cHl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y6k-In-jSf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hMP-FJ-kiO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dea-jo-bnh" kind="relationship" relationship="rootViewController" id="EJJ-Yt-EiF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRl-16-x0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="834"/>
+        </scene>
+    </scenes>
+</document>

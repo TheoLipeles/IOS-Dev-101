@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Kg-xu-Xm6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Xip-uA-8jR">
+            <objects>
+                <viewController id="0Kg-xu-Xm6" customClass="ViewController" customModule="FortuneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YK0-un-oli"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTq-3j-VOj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4f-jG-oD4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type Your Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYo-Xh-jv9">
+                                <rect key="frame" x="236" y="20" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-Sh-hQl">
+                                <rect key="frame" x="252" y="48" width="97" height="51.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="CFJ-a3-OeO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dju-gt-Z84">
+                                <rect key="frame" x="248" y="87" width="103" height="30"/>
+                                <state key="normal" title="Create Fortune">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createFortuneTapped:" destination="0Kg-xu-Xm6" eventType="touchUpInside" id="2Km-Ca-KDc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPm-I6-M0Q">
+                                <rect key="frame" x="16" y="125" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFM-gN-j2c">
+                                <rect key="frame" x="275" y="154" width="51" height="31"/>
+                                <connections>
+                                    <action selector="positiveSwitchSwitched:" destination="0Kg-xu-Xm6" eventType="valueChanged" id="7rU-P0-Emm"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="positive" translatesAutoresizingMaskIntoConstraints="NO" id="dDQ-Fo-lQH">
+                                <rect key="frame" x="180" y="193" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="iY3-yI-c3y"/>
+                                    <constraint firstAttribute="height" constant="240" id="oma-I6-EW1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ynB-Sh-hQl" secondAttribute="centerX" id="0Ld-za-BKc"/>
+                            <constraint firstItem="nYo-Xh-jv9" firstAttribute="top" secondItem="YK0-un-oli" secondAttribute="bottom" id="5cS-qa-iTY"/>
+                            <constraint firstItem="dPm-I6-M0Q" firstAttribute="leading" secondItem="z4f-jG-oD4" secondAttribute="leadingMargin" id="9Em-Yx-opg"/>
+                            <constraint firstAttribute="centerX" secondItem="Dju-gt-Z84" secondAttribute="centerX" id="AEq-EW-Z6G"/>
+                            <constraint firstItem="dDQ-Fo-lQH" firstAttribute="top" secondItem="gFM-gN-j2c" secondAttribute="bottom" constant="8" id="G32-Ln-IBi"/>
+                            <constraint firstItem="ynB-Sh-hQl" firstAttribute="top" secondItem="nYo-Xh-jv9" secondAttribute="bottom" constant="8" id="GmT-Gi-XLn"/>
+                            <constraint firstItem="dPm-I6-M0Q" firstAttribute="trailing" secondItem="z4f-jG-oD4" secondAttribute="trailingMargin" id="Ied-Qf-MLr"/>
+                            <constraint firstAttribute="centerX" secondItem="gFM-gN-j2c" secondAttribute="centerX" id="LKU-IF-jtX"/>
+                            <constraint firstAttribute="centerX" secondItem="nYo-Xh-jv9" secondAttribute="centerX" id="X8Y-Lw-HtL"/>
+                            <constraint firstItem="gFM-gN-j2c" firstAttribute="top" secondItem="dPm-I6-M0Q" secondAttribute="bottom" constant="8" id="c0N-ey-G8W"/>
+                            <constraint firstItem="Dju-gt-Z84" firstAttribute="top" secondItem="ynB-Sh-hQl" secondAttribute="bottom" constant="8" id="k6p-q1-02G"/>
+                            <constraint firstItem="dPm-I6-M0Q" firstAttribute="top" secondItem="Dju-gt-Z84" secondAttribute="bottom" constant="8" id="kg7-iV-RXf"/>
+                            <constraint firstAttribute="centerX" secondItem="dDQ-Fo-lQH" secondAttribute="centerX" id="ulE-NF-JxS"/>
+                            <constraint firstAttribute="centerX" secondItem="dPm-I6-M0Q" secondAttribute="centerX" id="zzD-vm-4Wm"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vFm-HK-O0E" appends="YES" id="Mmx-Xq-OB2"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="fortuneLabel" destination="dPm-I6-M0Q" id="6bR-UF-URa"/>
+                        <outlet property="positiveSwitch" destination="gFM-gN-j2c" id="6yr-6t-iLy"/>
+                        <outlet property="smileyImage" destination="dDQ-Fo-lQH" id="fbj-7e-5ap"/>
+                        <outlet property="userNameTextField" destination="ynB-Sh-hQl" id="JMe-qK-GfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0n-Kc-DXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vFm-HK-O0E">
+                    <connections>
+                        <action selector="displayTapped:" destination="0Kg-xu-Xm6" id="BNa-SJ-aI0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1175" y="211"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="positive" width="1024" height="1024"/>
+    </resources>
+</document>
